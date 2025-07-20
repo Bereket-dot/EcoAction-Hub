@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Action | EcoAction Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/community.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EcoAction Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Footprint Calculator</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="community-hero">
+            <h1>Join the Movement</h1>
+            <p>Connect with others and amplify your impact through collective action</p>
+        </section>
+
+        <section class="local-groups">
+            <h2>Find Local Environmental Groups</h2>
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <div class="search-box">
+                        <input type="text" id="location-search" placeholder="Enter your location">
+                        <button id="search-btn">Search</button>
+                    </div>
+                    <div class="filter-options">
+                        <label for="group-type">Group Type:</label>
+                        <select id="group-type">
+                            <option value="all">All Types</option>
+                            <option value="advocacy">Advocacy</option>
+                            <option value="cleanup">Cleanup</option>
+                            <option value="education">Education</option>
+                            <option value="urban-gardening">Urban Gardening</option>
+                            <option value="policy">Policy</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="group-list" id="group-list">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="event-filters">
+                <div class="filter">
+                    <label for="event-type">Event Type:</label>
+                    <select id="event-type">
+                        <option value="all">All Events</option>
+                        <option value="cleanup">Cleanup</option>
+                        <option value="protest">Protest/March</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="meeting">Meeting</option>
+                        <option value="fundraiser">Fundraiser</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="event-distance">Distance:</label>
+                    <select id="event-distance">
+                        <option value="5">Within 5 miles</option>
+                        <option value="10">Within 10 miles</option>
+                        <option value="25">Within 25 miles</option>
+                        <option value="50">Within 50 miles</option>
+                        <option value="100">Within 100 miles</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="event-date">Date:</label>
+                    <select id="event-date">
+                        <option value="all">All Dates</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="3months">Next 3 Months</option>
+                    </select>
+                </div>
+            </div>
+            <div class="events-grid" id="events-grid">
+                <!-- Filled by JavaScript -->
+            </div>
+        </section>
+
+        <section class="discussion-forum">
+            <h2>Community Discussions</h2>
+            <div class="forum-container">
+                <div class="forum-topics">
+                    <h3>Popular Topics</h3>
+                    <ul class="topic-list" id="topic-list">
+                        <!-- Filled by JavaScript -->
+                    </ul>
+                    <button id="new-topic-btn" class="cta-button">Start New Topic</button>
+                </div>
+                <div class="forum-posts">
+                    <h3 id="selected-topic-title">Select a topic to view discussion</h3>
+                    <div class="posts-container" id="posts-container">
+                        <div class="empty-state">Select a topic from the left to view its discussion</div>
+                    </div>
+                    <div class="new-post-form hidden" id="new-post-form">
+                        <textarea placeholder="Write your reply..."></textarea>
+                        <button id="submit-post" class="cta-button">Post Reply</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 EcoAction Hub | Together for a sustainable future</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="js/community.js"></script>
+</body>
+</html>

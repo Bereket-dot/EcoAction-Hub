@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | EcoAction Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EcoAction Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Footprint Calculator</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="settings-hero">
+            <h1>Your Settings</h1>
+            <p>Customize your EcoAction Hub experience</p>
+        </section>
+
+        <div class="settings-container">
+            <div class="settings-tabs">
+                <button class="tab-btn active" data-tab="account">Account</button>
+                <button class="tab-btn" data-tab="notifications">Notifications</button>
+                <button class="tab-btn" data-tab="privacy">Privacy</button>
+                <button class="tab-btn" data-tab="goals">Goals</button>
+            </div>
+
+            <div class="settings-content active" id="account">
+                <h2>Account Settings</h2>
+                <form id="account-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Change Password</label>
+                        <input type="password" id="password" placeholder="New password">
+                        <input type="password" id="confirm-password" placeholder="Confirm new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="City, Country">
+                        <p class="help-text">Used to show local events and groups</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="avatar">Profile Picture</label>
+                        <div class="avatar-upload">
+                            <div class="avatar-preview" id="avatar-preview"></div>
+                            <input type="file" id="avatar-upload" accept="image/*">
+                            <label for="avatar-upload" class="upload-btn">Choose Image</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </div>
+
+            <div class="settings-content" id="notifications">
+                <h2>Notification Preferences</h2>
+                <form id="notifications-form">
+                    <div class="form-group toggle-group">
+                        <label>Email Notifications</label>
+                        <label class="switch">
+                            <input type="checkbox" id="email-notifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Notification Types</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="notification-types" value="events" checked>
+                                Local events
+                            </label>
+                            <label>
+                                <input type="checkbox" name="notification-types" value="news" checked>
+                                Climate news
+                            </label>
+                            <label>
+                                <input type="checkbox" name="notification-types" value="tips" checked>
+                                Weekly tips
+                            </label>
+                            <label>
+                                <input type="checkbox" name="notification-types" value="reminders">
+                                Action plan reminders
+                            </label>
+                            <label>
+                                <input type="checkbox" name="notification-types" value="community">
+                                Community replies
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notification-frequency">Email Frequency</label>
+                        <select id="notification-frequency">
+                            <option value="daily">Daily</option>
+                            <option value="weekly" selected>Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="save-btn">Save Preferences</button>
+                </form>
+            </div>
+
+            <div class="settings-content" id="privacy">
+                <h2>Privacy Settings</h2>
+                <form id="privacy-form">
+                    <div class="form-group">
+                        <label>Profile Visibility</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="profile-visibility" value="public" checked>
+                                Public - Anyone can see my profile and activity
+                            </label>
+                            <label>
+                                <input type="radio" name="profile-visibility" value="community">
+                                Community - Only logged-in users can see my profile
+                            </label>
+                            <label>
+                                <input type="radio" name="profile-visibility" value="private">
+                                Private - Only I can see my profile
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Data Sharing</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" id="share-anonymized" checked>
+                                Share anonymized data for climate research
+                            </label>
+                            <p class="help-text">Your personal information will never be shared</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Delete Account</label>
+                        <button type="button" id="delete-account-btn" class="danger-btn">Delete My Account</button>
+                        <p class="help-text warning">Warning: This cannot be undone. All your data will be permanently deleted.</p>
+                    </div>
+                    <button type="submit" class="save-btn">Save Privacy Settings</button>
+                </form>
+            </div>
+
+            <div class="settings-content" id="goals">
+                <h2>Your Climate Goals</h2>
+                <form id="goals-form">
+                    <div class="form-group">
+                        <label for="main-goal">Primary Climate Goal</label>
+                        <select id="main-goal">
+                            <option value="reduce-footprint">Reduce my carbon footprint</option>
+                            <option value="advocate">Advocate for climate policy</option>
+                            <option value="educate">Educate others</option>
+                            <option value="community">Build community solutions</option>
+                            <option value="lifestyle">Adopt sustainable lifestyle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Focus Areas</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="focus-areas" value="transportation" checked>
+                                Transportation
+                            </label>
+                            <label>
+                                <input type="checkbox" name="focus-areas" value="energy" checked>
+                                Home Energy
+                            </label>
+                            <label>
+                                <input type="checkbox" name="focus-areas" value="food">
+                                Food
+                            </label>
+                            <label>
+                                <input type="checkbox" name="focus-areas" value="shopping">
+                                Shopping
+                            </label>
+                            <label>
+                                <input type="checkbox" name="focus-areas" value="waste">
+                                Waste Reduction
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal-intensity">Goal Intensity</label>
+                        <select id="goal-intensity">
+                            <option value="casual">Casual - Small changes when convenient</option>
+                            <option value="moderate" selected>Moderate - Regular sustainable practices</option>
+                            <option value="committed">Committed - Significant lifestyle changes</option>
+                            <option value="extreme">Extreme - Maximize personal impact</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="weekly-hours">Weekly Time Commitment</label>
+                        <select id="weekly-hours">
+                            <option value="1">1 hour/week</option>
+                            <option value="3" selected>3 hours/week</option>
+                            <option value="5">5 hours/week</option>
+                            <option value="10">10+ hours/week</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="save-btn">Save Goals</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 EcoAction Hub | Together for a sustainable future</p>
+    </footer>
+
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator | EcoAction Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EcoAction Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html" class="active">Footprint Calculator</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-intro">
+            <h1>Calculate Your Carbon Footprint</h1>
+            <p>Understand your environmental impact and discover ways to reduce it</p>
+        </section>
+
+        <form id="carbon-calculator">
+            <div class="calculator-section">
+                <h2>Transportation</h2>
+                <div class="form-group">
+                    <label for="car-miles">Miles driven per year:</label>
+                    <input type="number" id="car-miles" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="car-mpg">Your car's MPG:</label>
+                    <input type="number" id="car-mpg" min="1" value="25">
+                </div>
+                <div class="form-group">
+                    <label for="public-transport">Public transport hours per week:</label>
+                    <input type="number" id="public-transport" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="flights">Short flights (under 4 hours) per year:</label>
+                    <input type="number" id="flights-short" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="flights">Long flights (over 4 hours) per year:</label>
+                    <input type="number" id="flights-long" min="0">
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h2>Home Energy</h2>
+                <div class="form-group">
+                    <label for="electricity">Monthly electricity usage (kWh):</label>
+                    <input type="number" id="electricity" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="heating">Heating source:</label>
+                    <select id="heating">
+                        <option value="natural-gas">Natural Gas</option>
+                        <option value="electric">Electric</option>
+                        <option value="oil">Oil</option>
+                        <option value="propane">Propane</option>
+                        <option value="renewable">Renewable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="heating-amount">Monthly heating usage (therms or kWh):</label>
+                    <input type="number" id="heating-amount" min="0">
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h2>Diet</h2>
+                <div class="form-group">
+                    <label for="diet-type">Primary diet type:</label>
+                    <select id="diet-type">
+                        <option value="meat-heavy">Meat Heavy</option>
+                        <option value="average">Average</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="food-waste">Food waste level:</label>
+                    <select id="food-waste">
+                        <option value="high">High (30%+)</option>
+                        <option value="medium">Medium (10-30%)</option>
+                        <option value="low">Low (under 10%)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <h2>Shopping</h2>
+                <div class="form-group">
+                    <label for="shopping-habits">Shopping habits:</label>
+                    <select id="shopping-habits">
+                        <option value="high">Buy new items frequently</option>
+                        <option value="medium">Mix of new and used</option>
+                        <option value="low">Mostly second-hand/sustainable</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="calculate-btn">Calculate My Footprint</button>
+        </form>
+
+        <div id="results" class="hidden">
+            <h2>Your Carbon Footprint Results</h2>
+            <div class="result-card">
+                <div class="result-metric">
+                    <h3>Your Annual Footprint</h3>
+                    <p id="total-footprint">--</p>
+                    <p class="comparison">Compared to US average: <span id="comparison">--</span></p>
+                </div>
+                <div class="result-visual">
+                    <div class="footprint-gauge">
+                        <div class="gauge-fill" id="gauge-fill"></div>
+                    </div>
+                    <div class="gauge-labels">
+                        <span>Low</span>
+                        <span>Average</span>
+                        <span>High</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-section">
+                <h3>Footprint Breakdown</h3>
+                <div class="breakdown-chart">
+                    <canvas id="breakdownChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendations">
+                <h3>Personalized Recommendations</h3>
+                <ul id="recommendations-list">
+                    <!-- Filled by JavaScript -->
+                </ul>
+                <a href="solutions.html" class="cta-button">See More Solutions</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 EcoAction Hub | Together for a sustainable future</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

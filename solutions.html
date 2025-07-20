@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Solutions | EcoAction Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/solutions.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EcoAction Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Footprint Calculator</a></li>
+                <li><a href="solutions.html" class="active">Solutions</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="solutions-hero">
+            <h1>Practical Climate Solutions</h1>
+            <p>Discover actions you can take in different areas of your life</p>
+        </section>
+
+        <section class="solution-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="transportation">Transportation</button>
+                <button class="tab-btn" data-category="energy">Home Energy</button>
+                <button class="tab-btn" data-category="food">Food</button>
+                <button class="tab-btn" data-category="shopping">Shopping</button>
+                <button class="tab-btn" data-category="advocacy">Advocacy</button>
+            </div>
+
+            <div class="category-content active" id="transportation">
+                <h2>Transportation Solutions</h2>
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <img src="images/public-transport.jpg" alt="Public Transport">
+                        <h3>Use Public Transportation</h3>
+                        <p>Buses and trains produce far fewer emissions per passenger than private cars.</p>
+                        <div class="impact-meter">
+                            <span>Impact: High</span>
+                            <div class="meter-bar high"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/biking.jpg" alt="Biking">
+                        <h3>Bike or Walk</h3>
+                        <p>For short trips, active transportation has zero emissions and health benefits.</p>
+                        <div class="impact-meter">
+                            <span>Impact: Medium</span>
+                            <div class="meter-bar medium"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/electric-car.jpg" alt="Electric Vehicle">
+                        <h3>Switch to Electric</h3>
+                        <p>Electric vehicles produce fewer emissions, especially with renewable energy.</p>
+                        <div class="impact-meter">
+                            <span>Impact: High</span>
+                            <div class="meter-bar high"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/carpool.jpg" alt="Carpool">
+                        <h3>Carpool</h3>
+                        <p>Sharing rides reduces the number of vehicles on the road.</p>
+                        <div class="impact-meter">
+                            <span>Impact: Medium</span>
+                            <div class="meter-bar medium"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-content" id="energy">
+                <h2>Home Energy Solutions</h2>
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <img src="images/solar-panels.jpg" alt="Solar Panels">
+                        <h3>Install Solar Panels</h3>
+                        <p>Generate your own clean energy and potentially reduce your electricity bills.</p>
+                        <div class="impact-meter">
+                            <span>Impact: High</span>
+                            <div class="meter-bar high"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/led-bulbs.jpg" alt="LED Bulbs">
+                        <h3>Switch to LED Bulbs</h3>
+                        <p>LEDs use 75% less energy and last 25 times longer than incandescent lighting.</p>
+                        <div class="impact-meter">
+                            <span>Impact: Medium</span>
+                            <div class="meter-bar medium"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/thermostat.jpg" alt="Smart Thermostat">
+                        <h3>Smart Thermostat</h3>
+                        <p>Automatically adjust temperatures to save energy when you're away.</p>
+                        <div class="impact-meter">
+                            <span>Impact: Medium</span>
+                            <div class="meter-bar medium"></div>
+                        </div>
+                    </div>
+                    <div class="solution-card">
+                        <img src="images/insulation.jpg" alt="Insulation">
+                        <h3>Improve Insulation</h3>
+                        <p>Proper insulation reduces heating and cooling needs significantly.</p>
+                        <div class="impact-meter">
+                            <span>Impact: High</span>
+                            <div class="meter-bar high"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional category contents would follow the same pattern -->
+            
+        </section>
+
+        <section class="personalized-actions">
+            <h2>Create Your Action Plan</h2>
+            <p>Select solutions you want to implement and track your progress</p>
+            
+            <div class="action-plan">
+                <div class="plan-selector">
+                    <h3>Choose Actions</h3>
+                    <div class="action-options" id="action-options">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                </div>
+                <div class="plan-preview">
+                    <h3>Your Action Plan</h3>
+                    <ul id="selected-actions">
+                        <li class="empty-state">Select actions from the left to build your plan</li>
+                    </ul>
+                    <button id="save-plan" class="cta-button">Save My Plan</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 EcoAction Hub | Together for a sustainable future</p>
+    </footer>
+
+    <script src="js/solutions.js"></script>
+</body>
+</html>
