@@ -1,7 +1,8 @@
 # 🌎 Welcome to EcoAction Hub!
 Now, you you, who are reading this description, I'm here for saving the planet. No cape required. Do u want to be my eco-sidekick?
 
-If so, your Adventure Map: 
+# If so, your Adventure Map: 
+
 Home Base: "Climate change cheat sheet" - quick facts to wow friends at coffee shops (while using reusable cups, obviously).
 Carbon Footprint Calculator: "The truth-telling mirror for your eco-habits" - reveals your environmental shoe size (spoiler: we'll help shrink it!).
 Solutions Playground: "Eco-hacks for busy humans" - from painless swaps to superhero moves. Pick what fits your life!
